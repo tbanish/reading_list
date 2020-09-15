@@ -18,4 +18,14 @@ class SessionsController < ApplicationController
     erb :'/sessions/login'
   end
 
+  post '/login' do
+    @user = User.find_by(name: params[:name])
+    if @user && params[:name] != "" && params[:password] != ""
+      session[:id] = @user.id
+      redirect "/users/#{@user.id}"
+    else
+      redirect "/login"
+    end
+  end
+
 end
