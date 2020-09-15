@@ -5,7 +5,6 @@ class SessionsController < ApplicationController
   end
 
   post '/signup' do
-    binding.pry
     if params[:name] != "" && params[:email] != "" && params[:password] != "" && !User.find_by(name: params[:name])
       @user = User.create(params)
       session[:id] = @user.id
@@ -13,6 +12,10 @@ class SessionsController < ApplicationController
     else
       redirect "/signup"
     end
+  end
+
+  get '/login' do
+    erb :'/sessions/login'
   end
 
 end
