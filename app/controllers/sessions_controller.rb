@@ -28,4 +28,13 @@ class SessionsController < ApplicationController
     end
   end
 
+  get '/logout' do
+    erb :'/sessions/logout'
+  end
+
+  post '/logout' do
+    session.clear
+    redirect '/login'
+  end
+
 end
