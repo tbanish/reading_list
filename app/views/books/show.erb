@@ -1,2 +1,7 @@
 <h1><%= @book.title %></h1>
 <h2>By: <%= @book.author %></h2>
+
+<form class="" action="/books/<%= @book.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete Book">
+</form>
