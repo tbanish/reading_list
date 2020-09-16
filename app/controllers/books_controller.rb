@@ -10,8 +10,12 @@ class BooksController < ApplicationController
   end
 
   get '/books/new' do
-    @user = User.find_by(id: current_user.id)
-    erb :'/books/new'
+    if !logged_in?
+      redirect "/login"
+    else
+      @user = User.find_by(id: current_user.id)
+      erb :'/books/new'
+    end
   end
 
   post '/books' do
@@ -39,10 +43,10 @@ class BooksController < ApplicationController
 
   get '/books/:id/edit' do
     @book = Book.find_by(id: params[:id])
-    @user = User.find_by(id: current_user.id)
     if !logged_in?
       redirect "/login"
     elsif @book.user_id == current_user.id
+      @user = User.find_by(id: current_user.id)
       erb :"/books/edit"
     else
       redirect "/users/#{current_user.id}"
