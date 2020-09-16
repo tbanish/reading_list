@@ -8,12 +8,19 @@
 </head>
 <body>
   <div class="nav-bar">
-    <a href="/login">Login</a>
-    <a href="/logout">Logout</a>
-    <a href="/signup">Signup</a>
+    <% if !logged_in? %>
+      <a href="/login">Login</a>
+      <a href="/signup">Signup</a>
+    <% end %>
+    <% if logged_in? %>
+      <a href="/users/<%= @user.id %>">Home</a>
+      <a href="/books/new">Add New Book</a>
+      <a href="/books">View Reading List</a>
+      <a href="/logout">Logout</a>
+    <% end %>
   </div>
 
   <%= yield %>
-  
+
 </body>
 </html>
