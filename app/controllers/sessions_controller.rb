@@ -33,7 +33,11 @@ class SessionsController < ApplicationController
   end
 
   get '/logout' do
-    erb :'/sessions/logout'
+    if logged_in?
+      erb :'/sessions/logout'
+    else
+      redirect "/login"
+    end
   end
 
   post '/logout' do
