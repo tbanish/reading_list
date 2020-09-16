@@ -2,11 +2,23 @@
 Specs:
 
  [x] Use Sinatra to build the app
+ I am using Sinatra to build the app.
+
  [x] Use ActiveRecord for storing information in a database
+ I am using ActiveRecord for storing information in a database.
+
  [x] Include more than one model class (e.g. User, Post, Category)
+ I am using a User and Book model.
+
  [x] Include at least one has_many relationship on your User model (e.g. User has_many Posts)
+ A User has many books.
+
  [x] Include at least one belongs_to relationship on another model (e.g. Post belongs_to User)
+ A Book belongs to a User.
+
  [x] Include user accounts with unique login attribute (username or email)
+ Users login in with a unique username.
+ 
  [ ] Ensure that the belongs_to resource has routes for Creating, Reading, Updating and Destroying
  [ ] Ensure that users can't modify content created by other users
  [ ] Include user input validations
