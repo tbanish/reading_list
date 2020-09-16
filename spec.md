@@ -18,10 +18,16 @@ Specs:
 
  [x] Include user accounts with unique login attribute (username or email)
  Users login in with a unique username.
- 
- [ ] Ensure that the belongs_to resource has routes for Creating, Reading, Updating and Destroying
- [ ] Ensure that users can't modify content created by other users
- [ ] Include user input validations
+
+ [x] Ensure that the belongs_to resource has routes for Creating, Reading, Updating and Destroying
+ A user is able to create new books, view the books on their reading list, view each books individual page, edit each book's author and title and delete each book from their reading list.
+
+ [x] Ensure that users can't modify content created by other users
+ A user is only able to modify their own book content when logged in; they are never able to access another user's reading list, book show page, or user show page; they are not able to edit or delete another user's books and they are only able to edit or delete their own books if logged in.
+
+ [x] Include user input validations
+ A user can only log in, sign up, edit a book, or create a book if all parameters are filled out, otherwise they are redirected to another page.
+
  [ ] BONUS - not required - Display validation failures to user with error message (example form URL e.g. /posts/new)
  [ ] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code
 
