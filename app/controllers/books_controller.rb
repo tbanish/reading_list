@@ -1,8 +1,12 @@
 class BooksController < ApplicationController
 
   get '/books' do
-    @user = User.find_by(id: current_user.id)
-    erb :'/books/index'
+    if !logged_in?
+      redirect "/login"
+    else
+      @user = User.find_by(id: current_user.id)
+      erb :'/books/index'
+    end
   end
 
   get '/books/new' do
