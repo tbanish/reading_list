@@ -1,7 +1,11 @@
 class SessionsController < ApplicationController
 
   get '/signup' do
-    erb :'/sessions/signup'
+    if !logged_in?
+      erb :'/sessions/signup'
+    else
+      redirect "/users/#{@user.id}"
+    end
   end
 
   post '/signup' do
@@ -20,7 +24,7 @@ class SessionsController < ApplicationController
 
   post '/login' do
     @user = User.find_by(name: params[:name])
-    if @user && params[:name] != "" && params[:password] != ""
+    if @user.authenticate(params[:password]) && params[:name] != "" && params[:password] != ""
       session[:id] = @user.id
       redirect "/users/#{@user.id}"
     else
