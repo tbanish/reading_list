@@ -1,7 +1,7 @@
 <h1><%= @user.name %>'s Reading List</h1>
 
-<% @user.books.each do |book| %>
-  <ol>
-    <li><%= book.title %></li> 
-  </ol>
-<% end %>
+<ol>
+  <% @user.books.each do |book| %>
+    <li><%= book.title %></li>
+  <% end %>
+</ol>
