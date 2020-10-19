@@ -34,7 +34,7 @@ class BooksController < ApplicationController
 
     if !logged_in?
       redirect "/login"
-    elsif @book.user_id == current_user.id
+    elsif @book != nil && @book.user_id == current_user.id
       @user = User.find_by(id: current_user.id)
       erb :'/books/show'
     else
@@ -46,7 +46,7 @@ class BooksController < ApplicationController
     @book = Book.find_by(id: params[:id])
     if !logged_in?
       redirect "/login"
-    elsif @book.user_id == current_user.id
+    elsif @book != nil && @book.user_id == current_user.id
       @user = User.find_by(id: current_user.id)
       erb :"/books/edit"
     else
