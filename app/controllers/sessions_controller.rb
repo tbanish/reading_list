@@ -19,7 +19,11 @@ class SessionsController < ApplicationController
   end
 
   get '/login' do
-    erb :'/sessions/login'
+    if !logged_in?
+      erb :'/sessions/login'
+    else
+      redirect "/users/#{current_user.id}"
+    end
   end
 
   post '/login' do
