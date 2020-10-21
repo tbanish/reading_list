@@ -17,11 +17,9 @@ class User < ActiveRecord::Base
   end
 
   def next_on_list
-    if number_of_books >= 5
-      next_five_books
-    elsif number_of_books < 5 && number_of_books != 0
+    if number_of_books != 0
       next_book
-    elsif number_of_books == 0
+    else
       empty_list_message
     end
   end
