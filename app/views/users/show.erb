@@ -4,4 +4,4 @@
 
 <h2>Next on your list:</h2>
 
-<%= @user.next_on_list %>
+<a href="/books/<%= @user.next_book_id %>"><%= @user.next_on_list %></a>
