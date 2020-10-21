@@ -26,8 +26,13 @@ class User < ActiveRecord::Base
     end
   end
 
+  def next_book
+    self.books.first.title
+  end
+
   def empty_list_message
     "You do not have any books on your list."
   end
+
 
 end
