@@ -15,4 +15,15 @@ class User < ActiveRecord::Base
       "You have #{self.number_of_books} books on your list."
     end
   end
+
+  def next_on_list
+    if number_of_books >= 5
+      next_five_books
+    elsif number_of_books < 5 && number_of_books != 0
+      next_book
+    elsif number_of_books == 0
+      empty_list_message
+    end
+  end
+
 end
