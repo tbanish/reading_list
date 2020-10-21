@@ -28,6 +28,10 @@ class User < ActiveRecord::Base
     self.books.first.title
   end
 
+  def next_book_id
+    Book.find_by(title: self.next_book).id
+  end
+
   def empty_list_message
     "You do not have any books on your list."
   end
