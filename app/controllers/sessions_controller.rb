@@ -28,7 +28,7 @@ class SessionsController < ApplicationController
 
   post '/login' do
     @user = User.find_by(name: params[:name])
-    if !@user == nil && @user.authenticate(params[:password]) && params[:name] != "" && params[:password] != ""
+    if @user != nil && @user.authenticate(params[:password]) && params[:name] != "" && params[:password] != ""
       session[:id] = @user.id
       redirect "/users/#{current_user.id}"
     else
