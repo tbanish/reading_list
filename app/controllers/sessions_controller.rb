@@ -43,6 +43,7 @@ class SessionsController < ApplicationController
       @user = User.find_by(id: current_user.id)
       erb :'/sessions/logout'
     else
+      flash[:message] = "You must log in to view this page."
       redirect "/login"
     end
   end
