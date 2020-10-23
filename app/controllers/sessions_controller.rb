@@ -33,6 +33,7 @@ class SessionsController < ApplicationController
       session[:id] = @user.id
       redirect "/users/#{current_user.id}"
     else
+      flash[:message] = "Your login credentials are invalid.  Please try again."
       redirect "/login"
     end
   end
