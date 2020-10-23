@@ -42,6 +42,7 @@ class BooksController < ApplicationController
       @user = User.find_by(id: current_user.id)
       erb :'/books/show'
     else
+      flash[:message] = "Click the 'View Reading List' link at the top of the page to view your books."
       redirect "/users/#{current_user.id}"
     end
   end
