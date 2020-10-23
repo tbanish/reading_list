@@ -50,6 +50,7 @@ class BooksController < ApplicationController
   get '/books/:id/edit' do
     @book = Book.find_by(id: params[:id])
     if !logged_in?
+      flash[:message] = "You need to log in to view this page."
       redirect "/login"
     elsif @book != nil && @book.user_id == current_user.id
       @user = User.find_by(id: current_user.id)
