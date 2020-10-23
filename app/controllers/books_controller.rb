@@ -2,6 +2,7 @@ class BooksController < ApplicationController
 
   get '/books' do
     if !logged_in?
+      flash[:message] = "You need to log in to view this page."
       redirect "/login"
     else
       @user = User.find_by(id: current_user.id)
