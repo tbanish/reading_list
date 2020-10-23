@@ -39,8 +39,8 @@ class SessionsController < ApplicationController
   end
 
   get '/logout' do
-    @user = User.find_by(id: current_user.id)
     if logged_in?
+      @user = User.find_by(id: current_user.id)
       erb :'/sessions/logout'
     else
       redirect "/login"
