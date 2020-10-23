@@ -22,6 +22,7 @@ class SessionsController < ApplicationController
     if !logged_in?
       erb :'/sessions/login'
     else
+      flash[:message] = "You are already logged in."
       redirect "/users/#{current_user.id}"
     end
   end
