@@ -63,7 +63,7 @@ class BooksController < ApplicationController
 
   patch '/books/:id' do
     find_book_by_id
-    if params[:title] != "" && params[:author] != ""
+    if valid_book_form_submission
       @book.title = params[:title]
       @book.author = params[:author]
       @book.save
