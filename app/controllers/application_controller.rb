@@ -34,6 +34,14 @@ class ApplicationController < Sinatra::Base
       @book = Book.find_by(id: params[:id])
     end
 
+    def book_exists
+      @book != nil
+    end
+
+    def book_belongs_to_current_user
+      @book.user_id == current_user.id
+    end
+
     def log_in_to_view_page
       flash[:message] = "You need to log in to view this page."
     end
