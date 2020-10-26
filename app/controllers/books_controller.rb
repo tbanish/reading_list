@@ -22,9 +22,7 @@ class BooksController < ApplicationController
 
   post '/books' do
     if valid_book_form_submission
-      @book = Book.new(params)
-      @book.user_id = current_user.id
-      @book.save
+      set_and_save_title_and_author
       redirect "/books/#{@book.id}"
     else
       fill_out_all_fields
