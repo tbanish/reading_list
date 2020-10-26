@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
   end
 
   post '/signup' do
-    if params[:name] != "" && params[:email] != "" && params[:password] != "" && !User.find_by(name: params[:name])
+    if valid_sign_up_form_submission && unique_name
       @user = User.create(params)
       session[:id] = @user.id
       redirect "/users/#{@user.id}"
