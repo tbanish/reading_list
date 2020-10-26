@@ -74,6 +74,18 @@ class ApplicationController < Sinatra::Base
       !User.find_by(name: params[:name])
     end
 
+    def user_exists
+      @user != nil
+    end
+
+    def password_is_authenticated
+      @user.authenticate(params[:password])
+    end
+
+    def valid_login_form_submission
+      params[:name] != "" && params[:password] != ""
+    end
+
   end
 
 end
