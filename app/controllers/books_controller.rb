@@ -79,7 +79,7 @@ class BooksController < ApplicationController
 
     if !logged_in?
       redirect "/login"
-    elsif @book.user_id == current_user.id
+    elsif book_belongs_to_current_user
       @book.destroy
       redirect "/books"
     else
