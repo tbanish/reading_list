@@ -46,6 +46,12 @@ class ApplicationController < Sinatra::Base
       params[:title] != "" && params[:author] != ""
     end
 
+    def set_and_save_title_and_author
+      @book = Book.new(params)
+      @book.user_id = current_user.id
+      @book.save
+    end
+
     def log_in_to_view_page
       flash[:message] = "You need to log in to view this page."
     end
