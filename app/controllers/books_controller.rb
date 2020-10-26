@@ -52,7 +52,7 @@ class BooksController < ApplicationController
     if !logged_in?
       log_in_to_view_page
       redirect "/login"
-    elsif @book != nil && @book.user_id == current_user.id
+    elsif book_exists && book_belongs_to_current_user
       find_user_by_current_user_id
       erb :"/books/edit"
     else
