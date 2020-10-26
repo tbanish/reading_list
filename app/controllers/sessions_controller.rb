@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
   post '/signup' do
     if valid_sign_up_form_submission && unique_name
       @user = User.create(params)
-      session[:id] = @user.id
+      log_user_in
       redirect "/users/#{@user.id}"
     elsif !unique_name
       flash[:message] = "Name already in use.  Please choose another."
@@ -35,7 +35,7 @@ class SessionsController < ApplicationController
   post '/login' do
     @user = User.find_by(name: params[:name])
     if user_exists && password_is_authenticated && valid_login_form_submission
-      session[:id] = @user.id
+      log_user_in
       redirect "/users/#{current_user.id}"
     else
       flash[:message] = "Your login credentials are invalid.  Please try again."
@@ -54,7 +54,7 @@ class SessionsController < ApplicationController
   end
 
   post '/logout' do
-    session.clear
+    log_user_out
     redirect '/login'
   end
 
