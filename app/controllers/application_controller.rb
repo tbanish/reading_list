@@ -29,6 +29,10 @@ class ApplicationController < Sinatra::Base
     def log_in_to_view_page
       flash[:message] = "You need to log in to view this page."
     end
+
+    def fill_out_all_fields
+      flash[:message] = "Please make sure all fields are filled out before submitting form."
+    end
   end
 
 end
