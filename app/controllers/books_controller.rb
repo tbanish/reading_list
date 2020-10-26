@@ -62,9 +62,7 @@ class BooksController < ApplicationController
   patch '/books/:id' do
     find_book_by_id
     if valid_book_form_submission
-      @book.title = params[:title]
-      @book.author = params[:author]
-      @book.save
+      save_changes_to_book
       redirect "/books/#{@book.id}"
     else
       fill_out_all_fields
