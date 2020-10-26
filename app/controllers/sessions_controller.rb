@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
       session[:id] = @user.id
       redirect "/users/#{@user.id}"
     else
-      flash[:message] = "Please make sure all fields are filled out before submitting form."
+      fill_out_all_fields
       redirect "/signup"
     end
   end
