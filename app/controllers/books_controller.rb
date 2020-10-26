@@ -33,7 +33,7 @@ class BooksController < ApplicationController
   end
 
   get '/books/:id' do
-    @book = Book.find_by(id: params[:id])
+    find_book_by_id
 
     if !logged_in?
       log_in_to_view_page
@@ -48,7 +48,7 @@ class BooksController < ApplicationController
   end
 
   get '/books/:id/edit' do
-    @book = Book.find_by(id: params[:id])
+    find_book_by_id
     if !logged_in?
       log_in_to_view_page
       redirect "/login"
@@ -62,7 +62,7 @@ class BooksController < ApplicationController
   end
 
   patch '/books/:id' do
-    @book = Book.find_by(id: params[:id])
+    find_book_by_id
     if params[:title] != "" && params[:author] != ""
       @book.title = params[:title]
       @book.author = params[:author]
@@ -75,7 +75,7 @@ class BooksController < ApplicationController
   end
 
   delete '/books/:id' do
-    @book = Book.find_by(id: params[:id])
+    find_book_by_id
 
     if !logged_in?
       redirect "/login"
