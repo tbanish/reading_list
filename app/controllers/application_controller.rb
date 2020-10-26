@@ -42,6 +42,10 @@ class ApplicationController < Sinatra::Base
       @book.user_id == current_user.id
     end
 
+    def valid_book_form_submission
+      params[:title] != "" && params[:author] != ""
+    end
+
     def log_in_to_view_page
       flash[:message] = "You need to log in to view this page."
     end
