@@ -21,7 +21,7 @@ class BooksController < ApplicationController
   end
 
   post '/books' do
-    if params[:title] != "" && params[:author] != ""
+    if valid_book_form_submission
       @book = Book.new(params)
       @book.user_id = current_user.id
       @book.save
