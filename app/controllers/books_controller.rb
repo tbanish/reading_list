@@ -27,7 +27,7 @@ class BooksController < ApplicationController
       @book.save
       redirect "/books/#{@book.id}"
     else
-      flash[:message] = "Please make sure all fields are filled out before submitting form."
+      fill_out_all_fields
       redirect "/books/new"
     end
   end
@@ -69,7 +69,7 @@ class BooksController < ApplicationController
       @book.save
       redirect "/books/#{@book.id}"
     else
-      flash[:message] = "Please make sure all fields are filled out before submitting form."
+      fill_out_all_fields
       redirect "/books/#{@book.id}/edit"
     end
   end
