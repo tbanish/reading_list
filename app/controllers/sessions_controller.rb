@@ -45,10 +45,10 @@ class SessionsController < ApplicationController
 
   get '/logout' do
     if logged_in?
-      @user = User.find_by(id: current_user.id)
+      find_user_by_current_user_id
       erb :'/sessions/logout'
     else
-      flash[:message] = "You must log in to view this page."
+      log_in_to_view_page
       redirect "/login"
     end
   end
