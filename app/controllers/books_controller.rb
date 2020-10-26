@@ -5,7 +5,7 @@ class BooksController < ApplicationController
       log_in_to_view_page
       redirect "/login"
     else
-      @user = User.find_by(id: current_user.id)
+      find_user_by_current_user_id
       erb :'/books/index'
     end
   end
@@ -15,7 +15,7 @@ class BooksController < ApplicationController
       log_in_to_view_page
       redirect "/login"
     else
-      @user = User.find_by(id: current_user.id)
+      find_user_by_current_user_id
       erb :'/books/new'
     end
   end
@@ -39,7 +39,7 @@ class BooksController < ApplicationController
       log_in_to_view_page
       redirect "/login"
     elsif @book != nil && @book.user_id == current_user.id
-      @user = User.find_by(id: current_user.id)
+      find_user_by_current_user_id
       erb :'/books/show'
     else
       flash[:message] = "Click the 'View Reading List' link at the top of the page to view your books."
@@ -53,7 +53,7 @@ class BooksController < ApplicationController
       log_in_to_view_page
       redirect "/login"
     elsif @book != nil && @book.user_id == current_user.id
-      @user = User.find_by(id: current_user.id)
+      find_user_by_current_user_id
       erb :"/books/edit"
     else
       flash[:message] = "Click the 'View Reading List' link at the top of the page to select a book to edit."
