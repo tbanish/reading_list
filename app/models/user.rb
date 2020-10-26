@@ -35,6 +35,4 @@ class User < ActiveRecord::Base
   def empty_list_message
     "You do not have any books on your list."
   end
-
-
 end
