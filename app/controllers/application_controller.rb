@@ -25,6 +25,10 @@ class ApplicationController < Sinatra::Base
     def current_user
       @current_user ||= User.find_by(id: session[:id])
     end
+
+    def log_in_to_view_page
+      flash[:message] = "You need to log in to view this page."
+    end
   end
 
 end
