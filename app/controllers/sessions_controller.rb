@@ -14,7 +14,10 @@ class SessionsController < ApplicationController
       @user = User.create(params)
       session[:id] = @user.id
       redirect "/users/#{@user.id}"
-    else
+    elsif !unique_name
+      flash[:message] = "Name already in use.  Please choose another."
+      redirect "/signup"
+    elsif !valid_sign_up_form_submission
       fill_out_all_fields
       redirect "/signup"
     end
