@@ -65,6 +65,15 @@ class ApplicationController < Sinatra::Base
     def fill_out_all_fields
       flash[:message] = "Please make sure all fields are filled out before submitting form."
     end
+
+    def valid_sign_up_form_submission
+      params[:name] != "" && params[:email] != "" && params[:password] != ""
+    end
+
+    def unique_name
+      !User.find_by(name: params[:name])
+    end
+
   end
 
 end
