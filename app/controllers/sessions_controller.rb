@@ -57,5 +57,4 @@ class SessionsController < ApplicationController
     log_user_out
     redirect '/login'
   end
-
 end
