@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     elsif (logged_in? && !user_exists) || (logged_in? && @user != current_user)
       flash[:message] = "Click the links above to navigate the site."
       redirect "/users/#{current_user.id}"
-    elsif logged_in? && @user.id == current_user.id
+    elsif logged_in? && @user == current_user
       erb :"/users/show"
     end
   end
