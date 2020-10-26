@@ -85,7 +85,5 @@ class ApplicationController < Sinatra::Base
     def valid_login_form_submission
       params[:name] != "" && params[:password] != ""
     end
-
   end
-
 end
