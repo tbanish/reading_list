@@ -52,6 +52,12 @@ class ApplicationController < Sinatra::Base
       @book.save
     end
 
+    def save_changes_to_book
+      @book.title = params[:title]
+      @book.author = params[:author]
+      @book.save
+    end
+
     def log_in_to_view_page
       flash[:message] = "You need to log in to view this page."
     end
