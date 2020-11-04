@@ -12,17 +12,19 @@
     <div id="wrapper">
 
       <div class="nav-bar">
-        <% if !logged_in? %>
-          <a href="/">Home</a>
-          <a href="/login">Login</a>
-          <a href="/signup">Signup</a>
-        <% end %>
-        <% if logged_in? %>
-          <a href="/users/<%= @user.id %>">Home</a>
-          <a href="/books/new">Add New Book</a>
-          <a href="/books">View Reading List</a>
-          <a href="/logout">Logout</a>
-        <% end %>
+        <div class="nav-links">
+          <% if !logged_in? %>
+            <a href="/">Home</a>
+            <a href="/login">Login</a>
+            <a href="/signup">Signup</a>
+          <% end %>
+          <% if logged_in? %>
+            <a href="/users/<%= @user.id %>">Home</a>
+            <a href="/books/new">Add New Book</a>
+            <a href="/books">View Reading List</a>
+            <a href="/logout">Logout</a>
+          <% end %>
+        </div>
       </div>
 
       <div class="flash-message">
