@@ -6,6 +6,14 @@ html, body {
 }
 
 .nav-bar {
-  padding: 10px;
+  padding-bottom: 25px;
   border-bottom: 1px solid #bdbdbd;
+}
+
+.nav-links {
+  float: right;
+}
+
+.nav-links a {
+  padding: 5px;
 }
