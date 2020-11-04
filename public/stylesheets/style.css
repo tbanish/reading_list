@@ -21,3 +21,9 @@ html, body {
 .logo {
   float: left;
 }
+
+.logo a {
+  text-decoration: none;
+  font-style: oblique;
+  color: #3f3f3f;
+}
