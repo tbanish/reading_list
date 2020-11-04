@@ -17,3 +17,7 @@ html, body {
 .nav-links a {
   padding: 5px;
 }
+
+.logo {
+  float: left;
+}
