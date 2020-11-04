@@ -17,6 +17,8 @@ html, body {
 
 .nav-links a {
   padding: 5px;
+  text-decoration: none;
+  color: #696969;
 }
 
 .logo {
