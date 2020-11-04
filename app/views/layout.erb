@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 <body>
-    <div id="wrapper">
+  <div id="wrapper">
 
       <div class="nav-bar">
         <div class="logo">
@@ -34,13 +34,19 @@
         </div>
       </div>
 
+      <% if flash[:message] %>
       <div class="flash-message">
-        <% if flash[:message] %>
-          <p><%= flash[:message] %></p>
-        <% end %>
+        <p><%= flash[:message] %></p>
       </div>
+      <% end %>
 
       <%= yield %>
+
+    <div class="footer">
+      <div class="copyright">
+        <p>Tom Banish &copy;</p>
+      </div>
+    </div>
 
   </div>
 </body>
