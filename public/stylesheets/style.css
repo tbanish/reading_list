@@ -30,3 +30,8 @@ html, body {
   font-style: oblique;
   color: #3f3f3f;
 }
+
+a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
