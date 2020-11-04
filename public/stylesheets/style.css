@@ -6,6 +6,7 @@ html, body {
 }
 
 .nav-bar {
+  padding-top: 5px;
   padding-bottom: 25px;
   border-bottom: 1px solid #bdbdbd;
 }
