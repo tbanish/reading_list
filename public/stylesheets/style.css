@@ -4,3 +4,8 @@ html, body {
   background: white;
   font-family: Raleway;
 }
+
+.nav-bar {
+  padding: 10px;
+  border-bottom: 1px solid #333333;
+}
