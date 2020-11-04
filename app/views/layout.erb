@@ -12,6 +12,13 @@
     <div id="wrapper">
 
       <div class="nav-bar">
+        <div class="logo">
+          <% if !logged_in? %>
+            <a href="/">the reading list</a>
+          <% elsif logged_in? %>
+            <a href="/users/<%= @user.id %>">the reading list</a>
+          <% end %>
+        </div>
         <div class="nav-links">
           <% if !logged_in? %>
             <a href="/">Home</a>
