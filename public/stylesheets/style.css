@@ -146,3 +146,8 @@ a:hover {
   padding: 5px;
   font-size: 18px;
 }
+
+.reading-list a {
+  text-decoration: none;
+  color: black;
+}
