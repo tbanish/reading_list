@@ -94,6 +94,10 @@ h1 {
   margin-left: 40%;
 }
 
+.user-home-page {
+  margin-top: 5%;
+}
+
 a:hover {
   text-decoration: underline;
   font-weight: bold;
