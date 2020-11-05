@@ -163,3 +163,15 @@ a:hover {
 .book-page-buttons a {
   color: black;
 }
+
+.book-edit-page {
+  margin-top: 5%;
+}
+
+.book-edit-form {
+  margin-left: 40%;
+}
+
+.book-edit-page p {
+  margin-left: 40%;
+}
