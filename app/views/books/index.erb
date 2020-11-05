@@ -1,9 +1,11 @@
-<h1><%= @user.name %>'s Reading List</h1>
+<div class="reading-list-page">
+  <h1><%= @user.name %>'s Reading List</h1>
 
-<div class="reading-list">
-  <ol>
-    <% @user.books.each do |book| %>
-      <li><a href="/books/<%= book.id %>"><%= book.title %></a></li>
-    <% end %>
-  </ol>
+  <div class="reading-list">
+    <ol>
+      <% @user.books.each do |book| %>
+        <li><a href="/books/<%= book.id %>"><%= book.title %></a></li>
+      <% end %>
+    </ol>
+  </div>
 </div>
