@@ -137,3 +137,7 @@ a:hover {
 .reading-list-page h1 {
   text-decoration: underline;
 }
+
+.reading-list {
+  margin-left: 40%;
+}
