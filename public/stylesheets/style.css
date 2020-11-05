@@ -192,3 +192,8 @@ a:hover {
 .logout-button {
   text-align: center;
 }
+
+.flash-message {
+  color: red;
+  text-align: center;
+}
