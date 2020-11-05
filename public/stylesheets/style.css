@@ -31,10 +31,7 @@ html, body {
   color: #3f3f3f;
 }
 
-a:hover {
-  text-decoration: underline;
-  font-weight: bold;
-}
+
 
 .footer {
   position: fixed;
@@ -95,4 +92,9 @@ h1 {
 
 .signup-form {
   margin-left: 40%;
+}
+
+a:hover {
+  text-decoration: underline;
+  font-weight: bold;
 }
