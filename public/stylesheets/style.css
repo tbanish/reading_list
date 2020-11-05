@@ -174,8 +174,13 @@ a:hover {
 
 .book-edit-form {
   margin-left: 40%;
+  padding-top: 20px;
 }
 
 .book-edit-page p {
   margin-left: 40%;
+}
+
+.book-edit-page a {
+  color: black;
 }
