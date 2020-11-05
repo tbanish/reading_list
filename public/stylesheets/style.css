@@ -80,3 +80,7 @@ h1 {
 #welcome {
   text-decoration: underline;
 }
+
+.login-form {
+  margin-left: 40%;
+}
