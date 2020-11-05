@@ -1,10 +1,11 @@
-<h1><%= @book.title %></h1>
-<h2>By: <%= @book.author %></h2>
+<div class="book-page">
+  <h1><%= @book.title %></h1>
+  <h2>By: <%= @book.author %></h2>
 
-<a href="/books/<%= @book.id %>/edit">Edit Book</a>
-<br>
-<br>
-<form class="" action="/books/<%= @book.id %>" method="post">
-  <input type="hidden" name="_method" value="delete">
-  <input type="submit" value="Delete Book">
-</form>
+  <p>Click here to <a href="/books/<%= @book.id %>/edit">Edit Book</a><p>
+  <br>
+  <form class="" action="/books/<%= @book.id %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Delete Book">
+  </form>
+</div>
