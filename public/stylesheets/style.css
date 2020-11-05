@@ -120,3 +120,12 @@ a:hover {
   text-decoration: underline;
   font-weight: bold;
 }
+
+.new-book-page {
+  margin-top: 5%;
+}
+
+.new-book-form {
+  margin-top: 50px;
+  margin-left: 40%;
+}
