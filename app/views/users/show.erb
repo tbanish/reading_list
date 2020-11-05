@@ -1,14 +1,16 @@
-<h1>Hi <%= @user.name  %></h1>
+<div class="user-home-page">
+  <h1>Hi <%= @user.name  %></h1>
 
-<div class="book_list_stats">
-  <p><%= @user.book_list_stats %></p>
-</div>
+  <div class="book_list_stats">
+    <p><%= @user.book_list_stats %></p>
+  </div>
 
-<div class="next_on_list">
-  <% if @user.number_of_books != 0 %>
-    <h2>Next on your list:</h2>
-    <a href="/books/<%= @user.next_book_id %>"><%= @user.next_on_list %></a>
-  <% else %>
-    <p>Add a book <a href="/books/new">here.</a></p>
-  <% end %>
+  <div class="next_on_list">
+    <% if @user.number_of_books != 0 %>
+      <h2>Next on your list:</h2>
+      <a href="/books/<%= @user.next_book_id %>"><%= @user.next_on_list %></a>
+    <% else %>
+      <p>Add a book <a href="/books/new">here.</a></p>
+    <% end %>
+  </div>
 </div>
