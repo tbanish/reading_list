@@ -55,6 +55,10 @@ h1 {
   text-align: center;
 }
 
+.welcome-page-content {
+  margin-top: 5%;
+}
+
 .welcome-page-content #message {
   text-align: center;
 }
