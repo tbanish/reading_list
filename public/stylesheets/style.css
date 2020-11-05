@@ -54,3 +54,11 @@ a:hover {
 h1 {
   text-align: center;
 }
+
+.welcome-page-content #message {
+  text-align: center;
+}
+
+.welcome-page-content #bullets {
+  margin-left: 25%;
+}
