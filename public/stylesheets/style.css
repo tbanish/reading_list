@@ -151,3 +151,11 @@ a:hover {
   text-decoration: none;
   color: black;
 }
+
+.book-page h2 {
+  text-align: center;
+}
+
+.book-page-buttons {
+  text-align: center;
+}
