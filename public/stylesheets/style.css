@@ -159,3 +159,7 @@ a:hover {
 .book-page-buttons {
   text-align: center;
 }
+
+.book-page-buttons a {
+  color: black;
+}
