@@ -184,3 +184,11 @@ a:hover {
 .book-edit-page a {
   color: black;
 }
+
+.logout-page {
+  margin-top: 5%;
+}
+
+.logout-button {
+  text-align: center;
+}
