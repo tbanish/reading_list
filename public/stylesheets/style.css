@@ -152,6 +152,10 @@ a:hover {
   color: black;
 }
 
+.book-page {
+  margin-top: 5%;
+}
+
 .book-page h2 {
   text-align: center;
 }
