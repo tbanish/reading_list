@@ -141,3 +141,8 @@ a:hover {
 .reading-list {
   margin-left: 40%;
 }
+
+.reading-list li {
+  padding: 5px;
+  font-size: 18px;
+}
