@@ -108,6 +108,10 @@ h1 {
   padding-bottom: 7px;
 }
 
+.next_on_list {
+  text-align: center;
+}
+
 a:hover {
   text-decoration: underline;
   font-weight: bold;
