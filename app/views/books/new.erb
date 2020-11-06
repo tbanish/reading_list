@@ -1,5 +1,5 @@
 <div class="new-book-page">
-  <h1>Hi <%= @user.name %>. Let's add a book to your list.</h1>
+  <h1>Hey <%= @user.name %>. <span>Let's add a book to your list.</span></h1>
 
   <form class="new-book-form" action="/books" method="post">
     <label for="title">Title: </label>
@@ -10,6 +10,6 @@
     <input type="text" name="author">
     <br>
     <br>
-    <input type="submit" value="Add Book">
+    <input type="submit" class="button" value="Add Book">
   </form>
 </div>
