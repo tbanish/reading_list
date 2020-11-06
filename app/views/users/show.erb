@@ -1,10 +1,11 @@
 <div class="user-home-page">
   <h1 id="user-name">Hi <%= @user.name %>.</h1>
-  <h1><span>What would you like to read today?</span></h1>
 
   <div class="book_list_stats">
     <p><%= @user.book_list_stats %></p>
   </div>
+  
+  <h1><span>What would you like to read today?</span></h1>
 
   <div class="next_on_list">
     <% if @user.number_of_books != 0 %>
