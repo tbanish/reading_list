@@ -52,6 +52,10 @@ h1 {
   text-align: center;
 }
 
+span, h2, h3 {
+  color: #ff9922;
+}
+
 .welcome-page-content {
   margin-top: 5%;
 }
