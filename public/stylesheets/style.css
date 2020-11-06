@@ -143,6 +143,10 @@ a:hover {
   text-decoration: underline;
 }
 
+.reading-list-page h2 {
+  text-align: center;
+}
+
 .reading-list {
   margin-left: 40%;
   max-height: 450px;
