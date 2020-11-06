@@ -1,6 +1,8 @@
 <div class="reading-list-page">
   <h1><%= @user.name %>'s Reading List</h1>
 
+  <h2>What would you like to read?</h2>
+
   <div class="reading-list">
     <ol>
       <% @user.books.each do |book| %>
