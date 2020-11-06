@@ -149,7 +149,7 @@ a:hover {
 
 .reading-list {
   margin-left: 40%;
-  max-height: 450px;
+  max-height: 320px;
   overflow: scroll;
 }
 
