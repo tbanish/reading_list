@@ -117,8 +117,8 @@ h1 {
 }
 
 a:hover {
-  text-decoration: underline;
   font-weight: bold;
+  color: 	#008844;
 }
 
 .new-book-page {
