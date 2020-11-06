@@ -1,5 +1,5 @@
 <div class="book-edit-page">
-  <h1>Let's make some changes to <%= @book.title %>.</h1>
+  <h1>Let's make some changes to <span><%= @book.title %></span>.</h1>
 
   <form class="book-edit-form" action="/books/<%= @book.id %>" method="post">
     <input type="hidden" name="_method" value="patch">
@@ -11,7 +11,7 @@
     <input type="text" name="author" value="<%= @book.author %>">
     <br>
     <br>
-    <input type="submit" value="Edit Book">
+    <input type="submit" class="button" value="Edit Book">
   </form>
   <br>
   <p>Head back to <a href="/books/<%= @book.id %>">book page</a></p>
