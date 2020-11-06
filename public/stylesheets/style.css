@@ -121,14 +121,22 @@ span, h2, h3 {
   font-size: 25px;
 }
 
+.first-book a {
+  text-decoration: none;
+  color: #ff9922;
+  font-size: 25px;
+}
+
+.first-book {
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+  text-align: center;
+}
+
 h2#next_book_heading {
   text-decoration: underline;
   color: #704c70;
-}
-
-a:hover {
-  font-weight: bold;
-  color: 	#008844;
 }
 
 .new-book-page {
@@ -226,4 +234,9 @@ a:hover {
 
 .button:hover {
   background-color: #008844;
+}
+
+a:hover {
+  font-weight: bold;
+  color: 	#008844;
 }
