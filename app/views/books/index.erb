@@ -1,13 +1,18 @@
 <div class="reading-list-page">
   <h1><%= @user.name %>'s Reading List</h1>
 
-  <h2>What would you like to read?</h2>
-
-  <div class="reading-list">
-    <ol>
-      <% @user.books.each do |book| %>
-        <li><a href="/books/<%= book.id %>"><%= book.title %></a></li>
-      <% end %>
-    </ol>
-  </div>
+  <% if @user.number_of_books != 0 %>
+    <h2>What would you like to read?</h2>
+    <div class="reading-list">
+      <ol>
+        <% @user.books.each do |book| %>
+          <li><a href="/books/<%= book.id %>"><%= book.title %></a></li>
+        <% end %>
+      </ol>
+    </div>
+  <% else %>
+    <div class="first-book">
+      <p>Let's get started by adding your <a href="/books/new">first book.</a></p>
+    </div>
+  <% end %>
 </div>
