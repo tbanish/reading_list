@@ -208,3 +208,9 @@ a:hover {
   color: #FF0000;
   text-align: center;
 }
+
+.button {
+  background-color: #329f69;
+  color: white;
+  border: none;
+}
