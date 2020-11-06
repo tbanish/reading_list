@@ -121,6 +121,11 @@ span, h2, h3 {
   font-size: 25px;
 }
 
+h2#next_book_heading {
+  text-decoration: underline;
+  color: #704c70;
+}
+
 a:hover {
   font-weight: bold;
   color: 	#008844;

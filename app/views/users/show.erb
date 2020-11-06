@@ -4,12 +4,12 @@
   <div class="book_list_stats">
     <p><%= @user.book_list_stats %></p>
   </div>
-  
+
   <h1><span>What would you like to read today?</span></h1>
 
   <div class="next_on_list">
     <% if @user.number_of_books != 0 %>
-      <h2>Next on your list:</h2>
+      <h2 id="next_book_heading">Next on your list:</h2>
       <a href="/books/<%= @user.next_book_id %>"><%= @user.next_on_list %></a>
     <% else %>
       <p><a href="/books/new">Let's add one.</a></p>
