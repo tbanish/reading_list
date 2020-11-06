@@ -213,4 +213,8 @@ a:hover {
   background-color: #329f69;
   color: white;
   border: none;
+  font-size: 16px;
+  font-family: Raleway;
+  padding: 10px;
+  border-radius: 4px;
 }
