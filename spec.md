@@ -28,8 +28,9 @@ Specs:
  [x] Include user input validations
  A user can only log in, sign up, edit a book, or create a book if all parameters are filled out, otherwise they are redirected to another page.
 
- [ ] BONUS - not required - Display validation failures to user with error message (example form URL e.g. /posts/new)
- [ ] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code
+ [x] BONUS - not required - Display validation failures to user with error message (example form URL e.g. /posts/new)
+ 
+ [x] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code
 
 Confirm:
  [x] You have a large number of small Git commits
