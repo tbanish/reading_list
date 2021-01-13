@@ -9,3 +9,9 @@ To use this application you follow the instructions below:
 - navigate into the reading-list directory
 - run bundle install in the terminal
 - run shotgun and open the url provided by shotgun
+
+## License
+
+Here is the link to the license for this code:
+
+https://opensource.org/licenses/MIT
